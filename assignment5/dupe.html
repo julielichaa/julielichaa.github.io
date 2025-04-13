@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dupe Finder - Chromatopia</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="dupe.js"></script> <!-- Ensures script loads after DOM -->
+</head>
+<body>
+    <header>
+        <h1>Chromatopia</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="dupe-search">
+            <div class="dupe-container">
+                <img src="Chromatopialogo.svg" alt="Chromatopia Logo" class="dupe-logo left">
+                
+                <div class="dupe-content">
+                    <h2>Find Makeup Dupes with Chromatopia!</h2>
+                    <form id="dupeForm">
+                        <label for="productName">Enter Product Name:</label>
+                        <input type="text" id="productName" placeholder="e.g., Haus Labs concealer" required>
+                        <button type="submit">Find Dupes</button>
+                    </form>
+                    <div id="dupeResults" aria-live="polite">
+                        <!-- Results will appear here -->
+                    </div>
+                </div>
+
+                <img src="Chromatopialogo.svg" alt="Chromatopia Logo" class="dupe-logo right">
+            </div>
+        </section>
+    </main>
+</body>
+</html>

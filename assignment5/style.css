@@ -1,0 +1,494 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #333;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Fixed Header */
+header {
+  background: linear-gradient(135deg, #1181a2, #6a5acd);
+  color: white;
+  padding: 50px 0;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navigation */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: #cd78e9;
+}
+
+/* Logo */
+.site-logo {
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  width: 150px;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.default-logo {
+  opacity: 1;
+}
+
+.scrolled-logo {
+  opacity: 0;
+}
+
+/* When scrolled */
+header.scrolled {
+  padding: 15px 0;
+}
+
+header.scrolled .default-logo {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+header.scrolled .scrolled-logo {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+  margin: 50px auto;
+  max-width: 1200px;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 40px;
+}
+
+#hero {
+  background: linear-gradient(135deg, #ff7f50, #6a5acd);
+  color: white;
+  padding: 120px 0;
+  text-align: center;
+  margin-top: 200px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color: white;
+}
+
+#upload-section {
+  background: linear-gradient(135deg, #ff7f50, #6a5acd);
+  color: white;
+  padding: 120px 0;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(97, 189, 101, 0.1);
+  max-width: 1000px;
+  margin: 120px auto;
+}
+
+.btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #6750ff, #ff4d4d);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #ff4d4d, #6750ff);
+  transform: scale(1.05);
+}
+
+/* Hide default file input */
+#fileInput {
+  display: none;
+}
+
+/* Custom file upload button */
+.custom-file-upload {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff7f50, #ff4d4d);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.custom-file-upload:hover {
+  background: linear-gradient(135deg, #ff4d4d, #ff7f50);
+  transform: scale(1.05);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Dupe Finder Section */
+#dupe-search {
+  margin-top: 160px; /* Added to prevent header overlap */
+}
+
+.dupe-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.dupe-logo {
+  height: 80px;
+  width: auto;
+}
+
+.dupe-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 500px;
+}
+
+#dupeForm button {
+  background-color: #ff69b4;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+#dupeForm button:hover {
+  background-color: #d94f9f;
+}
+
+#dupeResults {
+  margin-top: 20px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  text-align: left;
+}
+
+#dupeResults ul {
+  list-style: none;
+  padding: 0;
+}
+
+#dupeResults li {
+  padding: 8px 0;
+  font-size: 16px;
+}
+
+/* About Founder */
+#about-founder .card {
+  width: 250px;
+  margin: 0 auto;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+#about-founder .card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#about-founder h1 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+#about-founder .title {
+  font-size: 14px;
+  color: gray;
+}
+
+#about-founder p {
+  font-size: 12px;
+}
+
+#about-founder a i {
+  font-size: 16px;
+  margin: 5px;
+}
+
+/* Splash Screen Styles */
+#cover-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #ff7f50, #6a5acd);
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.cover-content h1 {
+  font-size: 4em;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.cover-content p {
+  font-size: 1.5em;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.cover-content .btn {
+  font-size: 18px;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #6750ff, #ff4d4d);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.cover-content .btn:hover {
+  background: linear-gradient(135deg, #ff4d4d, #6750ff);
+  transform: scale(1.05);
+}
+
+#main-content {
+  display: none;
+}
+
+/* Cover Page Customizations */
+#cover-page {
+  background-color: #f0f0f0;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+#cover-page h1,
+#cover-page p,
+#cover-page h3 {
+  color: #ffffff;
+}
+
+#cover-page p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#cover-page h3 {
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+#cover-page .btn {
+  background-color: #6750ff;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#cover-page .btn:hover {
+  background-color: #b67f7f;
+}
+
+/* Social Links */
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links a {
+  margin-right: 15px;
+  font-size: 20px;
+  color: #6750ff;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ff4d4d;
+}
+
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 20px 0;
+  scroll-snap-type: x mandatory;
+  width: 100%;
+}
+
+.scroll-container img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  scroll-snap-align: start;
+}
+
+.scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+body {
+  font-family: 'Lato', sans-serif;
+}
+.fade-in {
+  animation: fadeIn 1.5s ease-in forwards;
+  opacity: 0;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Hero Section Updates */
+.hero-image {
+  background-image: url("MAKEUP BACKGROUND.svg");
+  height: 70vh; /* Reduced height to make it smaller */
+  background-position: center 40%; /* Push the image down further */
+  background-repeat: no-repeat;
+  background-size: 80%; /* Make the background image smaller */
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 55%; /* Adjust this to control the vertical position of the text */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(0, 0, 0);
+}
+/* General section styling */
+#our-features {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #f8f9fa; /* Light background color */
+}
+
+.features-box {
+  background: linear-gradient(135deg, #6750ff, #ff4d4d);
+  color: white;
+  padding: 40px 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  animation: colorChange 5s infinite; /* Apply the color-changing animation */
+  transition: all 0.3s ease-in-out;
+}
+
+.features-box h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.features-box p {
+  font-size: 1.2em;
+}
+
+/* Animation for the color-changing effect */
+@keyframes colorChange {
+  0% {
+    background: linear-gradient(135deg, #6750ff, #ff4d4d);
+  }
+  25% {
+    background: linear-gradient(135deg, #ff4d4d, #ff7f50);
+  }
+  50% {
+    background: linear-gradient(135deg, #ff7f50, #6750ff);
+  }
+  75% {
+    background: linear-gradient(135deg, #6750ff, #ff4d4d);
+  }
+  100% {
+    background: linear-gradient(135deg, #ff4d4d, #6750ff);
+  }
+}
+.feature-card {
+  display: inline-block; /* Keeps the cards side by side */
+  width: 250px; /* Set a smaller width for the rectangles */
+  text-align: center;
+  margin: 10px; /* Add some space between the rectangles */
+}
+
+.feature-card h3 {
+  font-size: 1.2em; /* Adjusted font size for the smaller rectangles */
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 1em; /* Adjusted font size for better readability */
+  color: #555;
+}

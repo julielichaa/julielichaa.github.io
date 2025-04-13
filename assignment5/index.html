@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hue by You</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=American+Typewriter:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <style>
+    /* New CSS for the color-changing box and features section */
+    #features {
+      text-align: center;
+      padding: 80px 20px;
+      background-color: #f8f9fa; /* Light background color */
+    }
+
+    .features-box {
+      background: linear-gradient(135deg, #6750ff, #ff4d4d);
+      color: white;
+      padding: 40px 20px;
+      border-radius: 15px;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+      animation: colorChange 5s infinite; /* Apply the color-changing animation */
+      transition: all 0.3s ease-in-out;
+    }
+
+    .features-box h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    .features-box p {
+      font-size: 1.2em;
+    }
+
+    /* Animation for the color-changing effect */
+    @keyframes colorChange {
+      0% {
+        background: linear-gradient(135deg, #6750ff, #ff4d4d);
+      }
+      25% {
+        background: linear-gradient(135deg, #ff4d4d, #ff7f50);
+      }
+      50% {
+        background: linear-gradient(135deg, #ff7f50, #6750ff);
+      }
+      75% {
+        background: linear-gradient(135deg, #6750ff, #ff4d4d);
+      }
+      100% {
+        background: linear-gradient(135deg, #ff4d4d, #6750ff);
+      }
+    }
+
+    /* Style for the feature cards */
+    .feature-card {
+      margin: 20px;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .feature-card h3 {
+      font-size: 1.8em;
+      margin-bottom: 15px;
+    }
+
+    .feature-card p {
+      font-size: 1.2em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Splash Screen (Cover Page) -->
+  <div id="cover-page">
+    <div class="cover-content">
+      <h1>Welcome to Hue by You</h1>
+      <p>Find your perfect makeup look based on your outfit!</p>
+      <h3>Where Fashion Meets Beauty! Upload an image of your outfit, and let us recommend the perfect makeup look to match your style. Discover personalized makeup suggestions that complement your wardrobe effortlessly!</h3>
+      <a href="#main-content" id="enter-site" class="btn">Enter Site</a>
+    </div>
+  </div>
+
+  <div id="main-content">
+    <header>
+      <div class="container">
+        <img src="logoo.svg" alt="Hue by You Logo" class="site-logo default-logo" />
+        <img src="logo when you scroll.svg" alt="Hue by You Scrolled Logo" class="site-logo scrolled-logo" />
+        <nav>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#upload">Upload Clothes</a></li>
+            <li><a href="dupe.html">Dupe Finder</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Image Section with fade-in text -->
+    <div class="hero-image">
+      <div class="hero-text fade-in">
+        <h1>Hue by You</h1>
+        <p>Match your makeup to your vibe</p>
+        <a href="#upload" class="btn">Try it Now</a>
+      </div>
+    </div>
+
+    <section id="hero">
+      <div class="container">
+        <h2>Find your perfect makeup look based on your outfit!</h2>
+        <p>Upload your outfit, and let us suggest the best makeup pairings!</p>
+        <a href="#upload" class="btn">Get Started</a>
+      </div>
+    </section>
+
+    <!-- New About Section -->
+    <section id="about">
+      <h2>About Hue by You</h2>
+      <p>
+        Hue by You is your personal fashion-to-beauty stylist. We believe makeup isn't one-size-fits-all — it's a creative extension of your style. Our platform analyzes the colors, textures, and vibe of your outfit to recommend makeup looks that enhance your entire fit. Whether you're heading to brunch or a gala, we help you feel confidently you — head to toe.
+      </p>
+    </section>
+
+    <section id="upload">
+      <h2>Upload a picture of your outfit!</h2>
+      <form id="uploadForm">
+        <label for="fileInput" class="custom-file-upload">Choose File</label>
+        <input type="file" id="fileInput" accept="image/*" />
+        <button type="submit" class="btn">Generate Look</button>
+      </form>
+      <div id="output"></div>
+    </section>
+
+    <!-- Features Section with Color-Changing Box -->
+    <section id="features">
+      <div class="features-box">
+        <h2>Our Features</h2>
+        <div class="feature-card">
+          <h3>Personalized Looks</h3>
+          <p>Get makeup suggestions tailored to your outfit.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Fast & Easy</h3>
+          <p>Upload your outfit and get a look instantly.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Wide Variety</h3>
+          <p>Discover a wide range of makeup suggestions.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about-founder">
+      <h2 style="text-align:center">About HBY</h2>
+      <div class="card">
+        <img src="IMG_7143.jpeg" style="width:100%" />
+        <h1>Julie Lichaa</h1>
+        <p class="title">Founder of HBY</p>
+        <p>OCAD U</p>
+        <div>
+          <a href="https://www.instagram.com/julielicha" target="_blank"><i class="fa fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/julie-lichaa" target="_blank"><i class="fa fa-linkedin"></i></a>
+          <a href="mailto:julielisha6@gmail.com"><i class="fa fa-envelope"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>Created by Julie Lichaa. All rights reserved.</p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/julielicha" target="_blank"><i class="fa fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/julie-lichaa" target="_blank"><i class="fa fa-linkedin"></i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
